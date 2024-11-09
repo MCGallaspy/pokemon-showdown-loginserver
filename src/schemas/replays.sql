@@ -30,6 +30,5 @@ CREATE TABLE public.replays (
 	CONSTRAINT replays_pkey PRIMARY KEY (id ASC),
 	INDEX private_uploadtime (private ASC, uploadtime ASC),
 	INDEX private_formatid_uploadtime (private ASC, formatid ASC, uploadtime ASC),
-	INDEX private_formatid_rating (private ASC, formatid ASC, rating ASC),
-	INVERTED INDEX log (log gin_trgm_ops)
+	INDEX private_formatid_rating (private ASC, formatid ASC, rating ASC)
 );
